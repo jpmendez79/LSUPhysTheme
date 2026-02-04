@@ -1,0 +1,70 @@
+%-------------------------------------------------------------
+%  Package: beamertheme-LSUPhys
+%-------------------------------------------------------------
+
+%--------------------------------------
+%  Color Settings
+%--------------------------------------
+
+% define custom colors
+\ProvidesPackage{beamercolorthemeLSUPhys}
+\mode<presentation>
+
+\definecolor{lsupurple}{RGB}{70,29,124}%
+\definecolor{lsugold}{RGB}{253,208,35}%
+\definecolor{corppurple}{RGB}{60,16,83}%
+\definecolor{corpgold}{RGB}{210,159,19}%
+\definecolor{lightpurp}{RGB}{163,154,172}%
+\definecolor{lightgold}{RGB}{241,238,219}%
+\definecolor{lightgray}{RGB}{208,208,208}%
+\definecolor{halfgray}{RGB}{153,153,153}%
+\definecolor{processblk}{RGB}{0,0,0}%
+
+\newcommand{\beamertitlecolor}{lsupurple}
+\newcommand{\beamertextcolor}{processblk}
+\newcommand{\beamerbgcolor}{lsugold}
+\newcommand{\beamerfootertextcolor}{lsupurple}
+\newcommand{\alerttextcolor}{corpgold}
+% set beamer color themes
+\usecolortheme[named=lsupurple]{structure}
+
+% customize colors for elements
+\setbeamercolor{titlepage}{fg=lsugold, bg=lsupurple}
+
+\setbeamercolor*{normal text}{fg=\beamertextcolor, bg=\beamerbgcolor} 
+\setbeamercolor*{alerted text}{fg=\alerttextcolor, bg=\beamerbgcolor}
+\setbeamercolor*{footline}{fg=\beamerfootertextcolor, bg=\beamerbgcolor}
+\setbeamercolor*{frametitle}{fg=\beamertitlecolor, bg=\beamerbgcolor}
+
+
+\setbeamercolor*{section in toc}{parent=normal text}
+\setbeamercolor*{subsection in toc}{parent=normal text}
+\setbeamercolor*{subsubsection in toc}{parent=normal text}
+
+\setbeamercolor*{enumerate item}{parent=normal text}
+\setbeamercolor*{enumerate subitem}{parent=normal text}
+\setbeamercolor*{enumerate subsubitem}{parent=normal text}
+
+\setbeamercolor*{itemize item}{parent=normal text}
+\setbeamercolor*{itemize subitem}{parent=normal text}
+\setbeamercolor*{itemize subsubitem}{parent=normal text}
+
+\setbeamercolor*{bibliography item}{parent=normal text}
+\setbeamercolor*{bibliography entry title}{parent=normal text}
+\setbeamercolor*{bibliography entry author}{parent=normal text}
+\setbeamercolor*{bibliography entry location}{parent=normal text}
+\setbeamercolor*{bibliography entry note}{parent=normal text}
+
+\setbeamercolor*{caption name}{parent=normal text}
+
+
+
+\setbeamercolor*{normal text}{fg=processblk, bg=lsugold}
+\setbeamercolor{titlelike}{parent=structure}
+\setbeamercolor{block title}{fg=white,bg=lsupurple}
+\setbeamercolor{block body}{fg=black,bg=lightpurp}
+\setbeamercolor{block title example}{fg=white,bg=lsupurple}
+\setbeamercolor{block body example}{fg=processblk,bg=lightpurp}
+\setbeamercolor{block title alerted}{fg=lsupurple,bg=corpgold}
+\setbeamercolor{block body alerted}{fg=black,bg=lsugold}
+\mode<all>

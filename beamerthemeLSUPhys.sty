@@ -1,0 +1,60 @@
+%-------------------------------------------------------------
+%  Package: beamertheme-LSUPhys
+%-------------------------------------------------------------
+
+%--------------------------------------
+%  Beamer Settings
+%--------------------------------------
+
+\mode<presentation>
+\RequirePackage{tikz}
+\RequirePackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=cyan
+}
+\urlstyle{same}
+\newcommand{\headerpath}{LSU_Physics_Astronomy_gld.png}
+% For the title page, the logo is embedded in the total frame, meaning that \linewidth
+% here refers to the complete \paperwidth, small width values of < .4 are usually best.
+\newcommand{\logotitle}{\includegraphics[width=.2\linewidth]{\headerpath}}
+\usefonttheme{LSUPhys}
+\usecolortheme{LSUPhys}
+\useinnertheme{LSUPhys}
+% \beamerdefaultoverlayspecification{}
+
+% Redefine \titlepage to draw a colored background only during the title slide
+\renewcommand{\titlepage}{%
+  \usebackgroundtemplate{%
+    \tikz[remember picture, overlay]
+      \fill[lsupurple] (current page.south west) rectangle (current page.north east);
+  }%
+
+  \begin{frame}
+    \begin{beamercolorbox}{titlepage}
+    \hfill\logotitle\par% \logotitle is defined in outertheme
+    \vskip 75pt
+    \centering
+    {\Huge{\bf \inserttitle}}
+    \vskip 3pt
+    \ifx\insertsubtitle\@empty%
+    \else%
+      \large{\bf \insertsubtitle}\vskip 25pt%
+    \fi%
+    {\small\insertauthor}\vskip 2pt%
+    \ifx\insertinstitute\vskip 2pt%
+    \else%
+      {\small\insertinstitute}\vskip 2pt%
+    \fi%
+    \ifx\insertdate\@empty%
+    \else%
+      {\small\insertdate}%
+    \fi%
+  \end{beamercolorbox}
+
+    \end{frame}
+    \usebackgroundtemplate{} % Reset background for subsequent slides
+
+ }
+
+\mode<all>
