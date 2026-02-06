@@ -1,6 +1,7 @@
 %-------------------------------------------------------------
 %  Package: beamertheme-LSUPhys
 %-------------------------------------------------------------
+\ProvidesPackage{beamercolorthemeLSUPhys}
 
 %--------------------------------------
 %  Color Settings
@@ -35,11 +36,31 @@
 \setbeamercolor*{alerted text}{fg=\alerttextcolor, bg=\beamerbgcolor}
 \setbeamercolor*{footline}{fg=\beamerfootertextcolor, bg=\beamerbgcolor}
 \setbeamercolor*{frametitle}{fg=\beamertitlecolor, bg=\beamerbgcolor}
+% -------------------------------------------------
+% TOC (TABLE OF CONTENTS)
+% -------------------------------------------------
 
+% Numbers / bullets
+\setbeamercolor{section in toc}{
+  fg=lsugold
+}
 
-\setbeamercolor*{section in toc}{parent=normal text}
-\setbeamercolor*{subsection in toc}{parent=normal text}
-\setbeamercolor*{subsubsection in toc}{parent=normal text}
+\setbeamercolor{subsection in toc}{
+  fg=lsugold
+}
+
+% Text — explicitly inherit from normal text
+\setbeamercolor{section in toc text}{
+  parent=normal text
+}
+
+\setbeamercolor{subsection in toc text}{
+  parent=normal text
+}
+
+% \setbeamercolor*{section in toc}{fg=blue}
+% \setbeamercolor*{subsection in toc}{fg=blue}
+% \setbeamercolor*{subsubsection in toc}{parent=normal text}
 
 \setbeamercolor*{enumerate item}{parent=normal text}
 \setbeamercolor*{enumerate subitem}{parent=normal text}
